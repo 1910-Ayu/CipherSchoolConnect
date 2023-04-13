@@ -9,7 +9,6 @@ import Dashboard from './dashboard/Dashboard';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
 import Profile from './components/profile/Profile';
-import ProfileView from './components/profile/ProfileView';
 import Profiles from './components/profile/Profiles';
 import Myprofile from './components/profile/Myprofile';
 const App = () => {
@@ -27,7 +26,6 @@ const App = () => {
         <Route path='/profiles' element={<Profiles/>}/>
         <Route path="profile/:id" element={<Profile/>}/>
       </Routes>
-
     </BrowserRouter>
   )
 }
