@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCurrentProfile, getProfileById } from '../../actions/profile';
 import { useParams } from 'react-router';
+import {Link} from 'react-router-dom';
 
 const Profile = () => {
 
@@ -18,6 +19,7 @@ const Profile = () => {
     <Link to="/profiles" className="btn btn-light">
       Back To Profiles
     </Link>
+    </Fragment>
   )
 }
 
