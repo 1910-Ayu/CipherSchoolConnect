@@ -11,13 +11,14 @@ import ProfileInterest from './ProfileInterest';
 const Profile = () => {
 
     const dispatch = useDispatch();
-    const profile = useSelector((state)=> state.profile);
+    const { profile } = useSelector((state)=> state.profile);
     const auth = useSelector((state)=> state.auth);
     const params = useParams();
     useEffect(()=>{
         dispatch(getProfileById(params.id));
     },[]);
     
+   
   return (
     <Fragment>
     <Link to="/profiles" className="btn btn-light">
@@ -25,6 +26,8 @@ const Profile = () => {
     </Link>
     <div className="profile-grid my-1">
       <ProfileTop profile={profile}/>
+      </div>
+     
       <ProfileWeb profile={profile}/>
       <div className="profile-exp bg-white p-2">
         <ProfileInfo profile={profile}/>
@@ -32,8 +35,9 @@ const Profile = () => {
         <div className="profile-edu bg-white p-2">
           <ProfileInterest profile={profile}/>
         </div>
-      </div>
-    </Fragment>
+      
+  </Fragment>
+  
   )
 }
 

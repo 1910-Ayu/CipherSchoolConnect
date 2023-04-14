@@ -6,4 +6,4 @@ const Myprofile = () => {
   )
 }
 
-export default Myprofile
+export default Myprofile;

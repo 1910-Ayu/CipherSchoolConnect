@@ -1,8 +1,12 @@
 import React from 'react'
 
-const ProfileInterest = () => {
+const ProfileInterest = ({
+    profile:{
+        interests
+    }
+}) => {
   return (
-    <div>ProfileInterest</div>
+    <div></div>
   )
 }
 
